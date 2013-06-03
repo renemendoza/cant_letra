@@ -47,5 +47,10 @@ describe("cant_letra:digit_to_words", function() {
    expect(ntw).toBe("novecientos noventa y nueve mil novecientos noventa y nueve pesos 99/100 M.N.");
   });
 
+  it("100 should be cien pesos 00/100 M.N.", function() {
+   var ntw = cant_letra.ntw.evaluate_number_with_currency(100);
+   expect(ntw).toBe("cien pesos 00/100 M.N.");
+  });
+
 
 });
